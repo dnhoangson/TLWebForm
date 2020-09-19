@@ -28,7 +28,7 @@ namespace TLWebForm.DataAccess
             }
         }
 
-        public DataTable GetNhanVienById(string id)
+        public DataSet GetNhanVienById(string id)
         {
             string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -38,7 +38,7 @@ namespace TLWebForm.DataAccess
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                return ds.Tables[0];
+                return ds;
             }
         }
 
@@ -60,12 +60,10 @@ namespace TLWebForm.DataAccess
                     //System.Diagnostics.Debug.WriteLine(query);
                     cmd.ExecuteNonQuery();
                 }
-                
-
             }
         }
 
-        public DataTable GetNhanVienLatest()
+        public DataSet GetNhanVienLatest()
         {
             string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -75,7 +73,34 @@ namespace TLWebForm.DataAccess
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                return ds.Tables[0];
+                return ds;
+            }
+        }
+
+        public void UpdateNhanVien(string id, string fullName, string email, string password, bool isManager)
+        {
+            string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = @"declare @fullName varchar(256), @email varchar(100), @password varchar(100), @isManager bit " +
+                                "update NhanVien " +
+                                "set FullName = ISNULL(@fullName, FullName), " +
+                                "Email = ISNULL(@email, Email), " +
+                                "Password = ISNULL(@password, Password), " +
+                                "IsManager = @isManager " +
+                                "where id = @id";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@FullName", fullName);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    //cmd.Parameters.AddWithValue("@AvatarPath", avatarPath);
+                    cmd.Parameters.AddWithValue("@IsManager", isManager);
+                    //System.Diagnostics.Debug.WriteLine(query);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }

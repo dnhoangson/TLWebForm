@@ -26,7 +26,7 @@ namespace TLWebForm
             {
                 NhanVienAccess service = new NhanVienAccess();
                 service.InsertNhanVien(fullName, email, password, isManager);
-                DataTable nv = service.GetNhanVienLatest();
+                DataSet nv = service.GetNhanVienLatest();
                 GridView1.DataSource = nv;
                 GridView1.DataBind();
             }

@@ -20,7 +20,7 @@ namespace TLWebForm
         {
             NhanVienAccess service = new NhanVienAccess();
             string id = idTxtBox.Text;
-            DataTable nv = service.GetNhanVienById(id);
+            DataSet nv = service.GetNhanVienById(id);
             GridView1.DataSource = nv;
             GridView1.DataBind();
 
