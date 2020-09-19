@@ -42,23 +42,41 @@ namespace TLWebForm.DataAccess
             }
         }
 
-        public void InsertNhanVien(string fullName, string email, string password, string avatarPath, bool isManager)
+        public void InsertNhanVien(string fullName, string email, string password, bool isManager)
         {
             string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                connection.Open();
                 string query = @"insert into NhanVien(FullName, Email, Password, AvatarPath, IsManager)" +
-                                "values (@FullName, @Email, @Password, @AvatarPath, @IsManager)";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@FullName", fullName);
-                cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Password", password);
-                cmd.Parameters.AddWithValue("@AvatarPath", avatarPath);
-                cmd.Parameters.AddWithValue("@IsManager", isManager);
-                System.Diagnostics.Debug.WriteLine(query);
-                cmd.ExecuteNonQuery();
+                                "values (@FullName, @Email, @Password, NULL, @IsManager)";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@FullName", fullName);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    //cmd.Parameters.AddWithValue("@AvatarPath", avatarPath);
+                    cmd.Parameters.AddWithValue("@IsManager", isManager);
+                    //System.Diagnostics.Debug.WriteLine(query);
+                    cmd.ExecuteNonQuery();
+                }
+                
+
             }
-            
+        }
+
+        public DataTable GetNhanVienLatest()
+        {
+            string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"select * from NhanVien where id = (select max(id) from NhanVien)";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds.Tables[0];
+            }
         }
     }
 }
