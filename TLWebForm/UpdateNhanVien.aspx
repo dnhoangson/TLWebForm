@@ -14,7 +14,7 @@
             <asp:Button ID="loadBtn" runat="server" OnClick="loadBtn_Click" Text="Load" />
         </div>
         <p>
-            FullName: <asp:TextBox ID="fullNameTxtBox" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+            FullName: <asp:TextBox ID="fullNameTxtBox" runat="server"></asp:TextBox>
         </p>
         <p>
             Email:
@@ -29,8 +29,10 @@
                 <asp:ListItem Selected="True">True</asp:ListItem>
                 <asp:ListItem >False</asp:ListItem>
             </asp:RadioButtonList>
-            <asp:Button ID="submitBtn" runat="server" Text="Submit" />
+            <asp:Button ID="submitBtn" runat="server" Text="Submit" OnClick="submitBtn_Click" />
         </p>
+        <asp:TextBox ID="successTxt" runat="server" ReadOnly="True" Visible="False">Thành công</asp:TextBox>
+        <asp:TextBox ID="failedTxt" runat="server" ReadOnly="True" Visible="False">Thất bại</asp:TextBox>
     </form>
 </body>
 </html>

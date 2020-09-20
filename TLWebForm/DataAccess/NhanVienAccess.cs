@@ -83,8 +83,7 @@ namespace TLWebForm.DataAccess
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = @"declare @fullName varchar(256), @email varchar(100), @password varchar(100), @isManager bit " +
-                                "update NhanVien " +
+                string query = @"update NhanVien " +
                                 "set FullName = ISNULL(@fullName, FullName), " +
                                 "Email = ISNULL(@email, Email), " +
                                 "Password = ISNULL(@password, Password), " +

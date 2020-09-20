@@ -20,15 +20,37 @@ namespace TLWebForm
 
         protected void loadBtn_Click(object sender, EventArgs e)
         {
+            failedTxt.Style.Add("Visibility", "true");
+            successTxt.Style.Add("Visibility", "false");
             id = idTxtBox.Text;
             DataSet nv = service.GetNhanVienById(id);
-            fullNameTxtBox.Text = nv.Tables[0].Rows[1].ToString();
-            emailTxtBox.Text = nv.Tables[0].Rows[2].ToString();
-            passwordTxtBox.Text = nv.Tables[0].Rows[3].ToString();
-            string isMan = nv.Tables[0].Rows[5].ToString();
-            if(isMan == "true")
+            fullNameTxtBox.Text = nv.Tables[0].Rows[0]["FullName"].ToString();
+            emailTxtBox.Text = nv.Tables[0].Rows[0]["Email"].ToString();
+            passwordTxtBox.Text = nv.Tables[0].Rows[0]["Password"].ToString();
+            //string isMan = nv.Tables[0].Rows[5].ToString();
+        }
+
+        protected void submitBtn_Click(object sender, EventArgs e)
+        {
+            try
             {
-                
+                failedTxt.Style.Add("Visibility", "true");
+                successTxt.Style.Add("Visibility", "false");
+                string id = idTxtBox.Text;
+                string fullName = fullNameTxtBox.Text;
+                string email = emailTxtBox.Text;
+                string password = passwordTxtBox.Text;
+                bool isManager = Convert.ToBoolean(managerRadio.SelectedValue);
+                service.UpdateNhanVien(id, fullName, email, password, isManager);
+            }
+            catch (Exception ex)
+            {
+                failedTxt.Style.Add("Visibility", "true");
+                throw ex;
+            }
+            finally
+            {
+                successTxt.Style.Add("Visibility", "false");
             }
         }
     }
