@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="AddNhanVien.aspx" />
+    <Content Include="GUI\AddNhanVien.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -125,7 +125,9 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="GetNhanVienById.aspx" />
+    <Content Include="GUI\BinhLuanCongViec.aspx" />
+    <Content Include="GUI\CapNhatCongViec.aspx" />
+    <Content Include="GUI\GetNhanVienById.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -135,8 +137,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="DanhSachNhanVien.aspx" />
+    <Content Include="GUI\DanhSachNhanVien.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="GUI\Login.aspx" />
+    <Content Include="GUI\ThemCongViec.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -166,18 +170,19 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="UpdateNhanVien.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="GUI\UpdateNhanVien.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNhanVien.aspx.cs">
+    <Compile Include="GUI\AddNhanVien.aspx.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddNhanVien.aspx.designer.cs">
+    <Compile Include="GUI\AddNhanVien.aspx.designer.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -206,16 +211,47 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GetNhanVienById.aspx.cs">
+    <Compile Include="GUI\BinhLuanCongViec.aspx.cs">
+      <DependentUpon>BinhLuanCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\BinhLuanCongViec.aspx.designer.cs">
+      <DependentUpon>BinhLuanCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CapNhatCongViec.aspx.cs">
+      <DependentUpon>CapNhatCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\CapNhatCongViec.aspx.designer.cs">
+      <DependentUpon>CapNhatCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GetNhanVienById.aspx.cs">
       <DependentUpon>GetNhanVienById.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GetNhanVienById.aspx.designer.cs">
+    <Compile Include="GUI\GetNhanVienById.aspx.designer.cs">
       <DependentUpon>GetNhanVienById.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SuaCongViec.cs" />
+    <Compile Include="GUI\ThemCongViec.aspx.cs">
+      <DependentUpon>ThemCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ThemCongViec.aspx.designer.cs">
+      <DependentUpon>ThemCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XemCongViecTheoNhanVien.cs" />
+    <Compile Include="GUI\XemTatCaCongViec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -231,11 +267,18 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="UpdateNhanVien.aspx.cs">
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateNhanVien.aspx.cs">
       <DependentUpon>UpdateNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdateNhanVien.aspx.designer.cs">
+    <Compile Include="GUI\UpdateNhanVien.aspx.designer.cs">
       <DependentUpon>UpdateNhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -245,16 +288,17 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachNhanVien.aspx.cs">
+    <Compile Include="GUI\DanhSachNhanVien.aspx.cs">
       <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DanhSachNhanVien.aspx.designer.cs">
+    <Compile Include="GUI\DanhSachNhanVien.aspx.designer.cs">
       <DependentUpon>DanhSachNhanVien.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="BLL\" />
     <Folder Include="Helpers\AutoMapper\" />
   </ItemGroup>
   <ItemGroup>
