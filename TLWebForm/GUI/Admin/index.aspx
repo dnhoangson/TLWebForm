@@ -77,11 +77,12 @@
                       <th>Tên nhân viên</th>
                       <th>Tên đăng nhập</th>
                       <th>Mật khẩu</th>
+                      <th>Quyền</th>
                       <th>Xem công việc</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                      <asp:PlaceHolder ID="showNV" runat="server"></asp:PlaceHolder>
                       <td>1</td>
                       <td>Nguyễn Huy Thắng</td>
                       <td>huythang0903@gmail.com</td>
@@ -89,9 +90,10 @@
                       <td>
                         <a href="chitietcongviec.aspx">Chi tiết công việc</a>
                     </td>
-                    </tr>
+                   
                   </tbody>
                 </table>
+
               </div>
               <nav aria-label="...">
                 <ul class="pagination">
