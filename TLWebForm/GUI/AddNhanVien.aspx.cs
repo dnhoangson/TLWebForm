@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TLWebForm.BLL;
+using TLWebForm.App_Data.BAL;
 using TLWebForm.DataAccess;
 
 namespace TLWebForm

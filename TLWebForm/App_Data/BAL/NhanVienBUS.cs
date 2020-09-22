@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
-using TLWebForm.DataAccess;
+using TLWebForm.App_Data.DAL;
 
-namespace TLWebForm.BLL
+namespace TLWebForm.App_Data.BAL
 {
     public class NhanVienBUS
     {

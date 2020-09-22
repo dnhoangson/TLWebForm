@@ -25,5 +25,10 @@ namespace TLWebForm.GUI.NhanVien
                 table.Append("<thead>");
             }
         }
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

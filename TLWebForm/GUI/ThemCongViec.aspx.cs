@@ -16,7 +16,11 @@ namespace TLWebForm.GUI
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
+            string job_title = title.Text;
+            string job_desc = description.Text;
+            bool isPublic = Convert.ToBoolean(Type.SelectedValue);
+
+            Console.WriteLine(job_title + job_desc + "" + isPublic);
         }
     }
 }

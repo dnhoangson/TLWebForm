@@ -185,7 +185,8 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\NhanVienBUS.cs" />
+    <Compile Include="App_Data\BAL\NhanVienBUS.cs" />
+    <Compile Include="App_Data\DAL\NhanVienAccess.cs" />
     <Compile Include="GUI\AddNhanVien.aspx.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,7 +340,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Helpers\AutoMapper\" />
   </ItemGroup>
   <ItemGroup>

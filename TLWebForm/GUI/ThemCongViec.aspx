@@ -10,8 +10,6 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Tên công việc"></asp:Label>
-            <div>
-            </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="title" runat="server"></asp:TextBox>
         </div>
@@ -23,13 +21,13 @@
         <p style="margin-left: 40px">
             <asp:Label ID="Label5" runat="server" Text="Loại công việc"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                <asp:ListItem Selected="True" Value="public">Công khai</asp:ListItem>
-                <asp:ListItem Value="private">Riêng tư</asp:ListItem>
+            <asp:RadioButtonList ID="Type" runat="server">
+                <asp:ListItem Selected="True" Value="true">Công khai</asp:ListItem>
+                <asp:ListItem Value="false">Riêng tư</asp:ListItem>
             </asp:RadioButtonList>
         </p>
         <p style="margin-left: 200px">
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" style="height: 29px" />
         </p>
     </form>
 </body>

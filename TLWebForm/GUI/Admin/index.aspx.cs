@@ -6,7 +6,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TLWebForm.BLL;
+using TLWebForm.App_Data.BAL;
 
 namespace TLWebForm.GUI.Admin
 {

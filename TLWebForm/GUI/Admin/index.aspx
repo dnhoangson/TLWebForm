@@ -82,15 +82,10 @@
                     </tr>
                   </thead>
                   <tbody>
+        
                       <asp:PlaceHolder ID="showNV" runat="server"></asp:PlaceHolder>
-                      <td>1</td>
-                      <td>Nguyễn Huy Thắng</td>
-                      <td>huythang0903@gmail.com</td>
-                      <td>12345</td>
-                      <td>
-                        <a href="chitietcongviec.aspx">Chi tiết công việc</a>
-                    </td>
-                   
+                      
+        
                   </tbody>
                 </table>
 
