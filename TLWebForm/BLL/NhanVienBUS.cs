@@ -47,9 +47,9 @@ namespace TLWebForm.BLL
             service.UpdateNhanVien(id, fullName, email, password, isManager);
         }
 
-        public void Login()
+        public bool Login(string email, string password)
         {
-
+            return service.Login(email, password);
         }
     }
 }

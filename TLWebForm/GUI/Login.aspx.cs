@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TLWebForm.BLL;
 using TLWebForm.DataAccess;
 
 namespace TLWebForm.GUI
@@ -20,7 +21,7 @@ namespace TLWebForm.GUI
             string em = email.Value;
             string pw = password.Value;
 
-            NhanVienAccess service = new NhanVienAccess();
+            NhanVienBUS service = new NhanVienBUS();
             bool test = service.Login(em, pw);
 
 

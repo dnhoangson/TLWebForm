@@ -31,15 +31,18 @@ namespace TLWebForm.DataAccess
             string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                int count;
-                string query = @"select count(*) from NhanVien where Email = @Email and Password = @Password ";
+                
+                connection.Open();
+                string query = @"select 1 from NhanVien where Email = @Email and Password = @Password ";
                 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    connection.Open();
-                    count = (int) cmd.ExecuteScalar();
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    var result = cmd.ExecuteScalar();
+                    return result != null ? true : false;
                 }
-                return Convert.ToBoolean(count);
+                //return Convert.ToBoolean();
             }
         }
 
