@@ -5,8 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TLWebForm.BLL;
 using TLWebForm.DataAccess;
-using TLWebForm.DataAccess.Models;
+
 
 namespace TLWebForm
 {
@@ -14,7 +15,7 @@ namespace TLWebForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            NhanVienAccess service = new NhanVienAccess();
+            NhanVienBUS service = new NhanVienBUS();
             DataTable list = service.GetAllNhanVien();
             GridView1.DataSource = list;
             GridView1.DataBind();

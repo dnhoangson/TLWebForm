@@ -5,13 +5,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TLWebForm.BLL;
 using TLWebForm.DataAccess;
 
 namespace TLWebForm
 {
     public partial class UpdateNhanVien : System.Web.UI.Page
     {
-        private NhanVienAccess service = new NhanVienAccess();
+        private NhanVienBUS service = new NhanVienBUS();
         private string id;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +24,7 @@ namespace TLWebForm
             failedTxt.Style.Add("Visibility", "true");
             successTxt.Style.Add("Visibility", "false");
             id = idTxtBox.Text;
+
             DataSet nv = service.GetNhanVienById(id);
             fullNameTxtBox.Text = nv.Tables[0].Rows[0]["FullName"].ToString();
             emailTxtBox.Text = nv.Tables[0].Rows[0]["Email"].ToString();

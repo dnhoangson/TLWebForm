@@ -4,12 +4,53 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Đăng nhập admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        .bg-gradient-primary{
+            background-color: #4e73df;
+        }
+        .nav-link-title{
+            font-size: 16px !important;
+        }
+        .column-title{
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
+<body class="bg-gradient-primary">
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+    
+          <div class="col-xl-6 col-lg-7 col-md-6">
+            <div class="card o-hidden border-0 shadow-lg my-5" style="margin-top: 20% !important;">
+              <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">Đăng nhập admin</h1>
+                      </div>
+                      <form class="user" method="POST" runat="server">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-control-user" id="email" runat="server" name="email" placeholder="Nhập email..."/>
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control-user" id="password" runat="server" name="password" placeholder="Nhập mật khẩu"/>
+                        </div>
+                        <asp:Button ID="login_user" runat="server" OnClick="Login_Click" Text="Đăng nhập" class="btn btn-primary btn-user btn-block" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>    
+    </div>
 </body>
 </html>

@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using TLWebForm.DataAccess.Models;
 
 namespace TLWebForm.DataAccess
 {
@@ -25,6 +24,22 @@ namespace TLWebForm.DataAccess
 
                 //List<NhanVien> rows = connection.Query<NhanVien>("ListAll").ToList();
                 //return rows;
+            }
+        }
+        public bool Login(string email, string password)
+        {
+            string connectionString = DataAccess.Internal.DataAccess.GetConnectionString("TodoListDb");
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                int count;
+                string query = @"select count(*) from NhanVien where Email = @Email and Password = @Password ";
+                
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    count = (int) cmd.ExecuteScalar();
+                }
+                return Convert.ToBoolean(count);
             }
         }
 

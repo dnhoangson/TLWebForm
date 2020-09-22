@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TLWebForm.BLL;
 using TLWebForm.DataAccess;
 
 namespace TLWebForm
@@ -24,7 +25,7 @@ namespace TLWebForm
             bool isManager = Convert.ToBoolean(managerBtnList.SelectedValue);
             try
             {
-                NhanVienAccess service = new NhanVienAccess();
+                NhanVienBUS service = new NhanVienBUS();
                 service.InsertNhanVien(fullName, email, password, isManager);
                 DataSet nv = service.GetNhanVienLatest();
                 GridView1.DataSource = nv;
