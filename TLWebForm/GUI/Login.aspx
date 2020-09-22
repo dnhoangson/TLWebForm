@@ -5,18 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Đăng nhập admin</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style type="text/css">
-        .bg-gradient-primary{
-            background-color: #4e73df;
-        }
-        .nav-link-title{
-            font-size: 16px !important;
-        }
-        .column-title{
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="../Content/sb-admin-2.css" />
+    <link rel="stylesheet" href="../Content/style.css" /> 
 </head>
 <body class="bg-gradient-primary">
     <div class="container">
