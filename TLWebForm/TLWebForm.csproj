@@ -178,7 +178,9 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CongViecBUS.cs" />
     <Compile Include="BLL\NhanVienBUS.cs" />
+    <Compile Include="DataAccess\CongViecAccess.cs" />
     <Compile Include="GUI\AddNhanVien.aspx.cs">
       <DependentUpon>AddNhanVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
