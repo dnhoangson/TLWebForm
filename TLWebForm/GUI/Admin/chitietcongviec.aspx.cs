@@ -11,7 +11,9 @@ namespace TLWebForm.GUI.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var g = Request.QueryString["id"];//this value should be 23 now;
+            Console.WriteLine(g.ToString());
+            
         }
     }
 }

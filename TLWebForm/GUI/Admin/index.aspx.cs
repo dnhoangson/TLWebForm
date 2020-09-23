@@ -28,7 +28,8 @@ namespace TLWebForm.GUI.Admin
                             table.Append("<td>" + row[column.ColumnName] + "</td>");
                         
                         }
-                    table.Append("<td>kjhạkdhạksdkjáhákdhkjdsa</td>");
+                    table.Append("<td>"+ "<a href='chitietcongviec.aspx?id="+row[0]+"'>Chi tiết công việc</a>"+" </td>");
+                    //table.Append(row[1]);
                     table.Append("</tr>");
                 }
                 showNV.Controls.Add(new Literal { Text = table.ToString() });
