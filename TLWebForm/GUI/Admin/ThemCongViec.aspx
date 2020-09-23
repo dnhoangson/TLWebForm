@@ -105,9 +105,9 @@
                       <th>Tên công việc</th>
                       <th>Thao tác</th>
                     </tr>
-                      <asp:PlaceHolder ID="placeholder" runat="server" />
                   </thead>
                   <tbody>
+                      <asp:PlaceHolder ID="placeholder" runat="server" />
                     <tr>
                       <td>1</td>
                       <td>Lập trình fontend</td>

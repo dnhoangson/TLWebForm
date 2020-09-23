@@ -17,13 +17,6 @@ namespace TLWebForm.GUI.NhanVien
         {
             if (!Page.IsPostBack)
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionStrings"].ToString();
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "select * from [SVIEN]";
-                cmd.Connection = con;
-                SqlDataReader rd = cmd.ExecuteReader();
                 table.Append("<table class='table table - bordered' id='dataTable' width='100%' cellspacing='0'>");
                 table.Append("<thead>");
                 table.Append("<thead>");

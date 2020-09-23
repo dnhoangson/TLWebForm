@@ -87,7 +87,7 @@
                       <td>huythang0903@gmail.com</td>
                       <td>12345</td>
                       <td>
-                        <a href="chi">Chi tiết công việc</a>
+                        <a href="chitietcongviec.aspx">Chi tiết công việc</a>
                     </td>
                     </tr>
                   </tbody>

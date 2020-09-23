@@ -5,6 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        #TextArea1 {
+            height: 82px;
+            width: 420px;
+        }
+    </style>
 </head>
 <body>
     
@@ -15,6 +21,9 @@
 
         </div>
     </form>
+    
+    <p>
+        <textarea id="TextArea1" name="S1"></textarea></p>
     
 </body>
 </html>

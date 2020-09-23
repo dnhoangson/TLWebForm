@@ -17,24 +17,12 @@ namespace TLWebForm.GUI.Admin
         {
             if (!Page.IsPostBack)
             {
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = ConfigurationManager.ConnectionStrings["QLSV"].ToString();
-                con.Open();
-                SqlCommand cmd = new SqlCommand("select * from SVIEN",con);
-                SqlDataReader rd = cmd.ExecuteReader();
-                if (rd.HasRows)
-                {
-                    while (rd.Read())
-                    {
-                        table.Append("<tr class='column-title'>");
-                        table.Append("<th>" + rd[0] + "</th>");
-                        table.Append("<th>" + rd[1] + "</th>");
-                        table.Append("<th>" + rd[2] + "</th>");
-                        table.Append(" </tr>");
-                    }
-                }
+                table.Append("<tr>");
+                table.Append("<td>huythang</th>");
+                table.Append("<td>huythang</th>");
+                table.Append("<td>ffasdf</th>");
+                table.Append(" </tr>");
                 placeholder.Controls.Add(new Literal { Text = table.ToString() });
-                rd.Close();
             }
         }
     }

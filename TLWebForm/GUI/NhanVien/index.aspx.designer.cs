@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TLWebForm.GUI.Admin
+namespace TLWebForm.GUI.NhanVien
 {
 
 
-    public partial class index
+    public partial class CongViec
     {
     }
 }

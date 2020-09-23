@@ -145,6 +145,7 @@
     <Content Include="GUI\DanhSachNhanVien.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GUI\Login.aspx" />
+    <Content Include="GUI\NhanVien\index.aspx" />
     <Content Include="GUI\NhanVien\Demo.aspx" />
     <Content Include="GUI\ThemCongViec.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -268,6 +269,13 @@
     </Compile>
     <Compile Include="GUI\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\NhanVien\Demo.aspx.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
