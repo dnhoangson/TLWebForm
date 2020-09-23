@@ -115,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="Content\style.css" />
     <Content Include="GUI\AddNhanVien.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -125,6 +127,9 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GUI\Admin\chitietcongviec.aspx" />
+    <Content Include="GUI\Admin\index.aspx" />
+    <Content Include="GUI\Admin\ThemCongViec.aspx" />
     <Content Include="GUI\BinhLuanCongViec.aspx" />
     <Content Include="GUI\CapNhatCongViec.aspx" />
     <Content Include="GUI\GetNhanVienById.aspx" />
@@ -140,6 +145,8 @@
     <Content Include="GUI\DanhSachNhanVien.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="GUI\Login.aspx" />
+    <Content Include="GUI\NhanVien\index.aspx" />
+    <Content Include="GUI\NhanVien\Demo.aspx" />
     <Content Include="GUI\ThemCongViec.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -211,6 +218,27 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\chitietcongviec.aspx.cs">
+      <DependentUpon>chitietcongviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\chitietcongviec.aspx.designer.cs">
+      <DependentUpon>chitietcongviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemCongViec.aspx.cs">
+      <DependentUpon>ThemCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ThemCongViec.aspx.designer.cs">
+      <DependentUpon>ThemCongViec.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BinhLuanCongViec.aspx.cs">
       <DependentUpon>BinhLuanCongViec.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +269,20 @@
     </Compile>
     <Compile Include="GUI\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhanVien\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\NhanVien\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\SuaCongViec.cs" />
     <Compile Include="GUI\ThemCongViec.aspx.cs">
