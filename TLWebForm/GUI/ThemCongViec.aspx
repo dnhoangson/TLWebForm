@@ -10,24 +10,26 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Tên công việc"></asp:Label>
+            <div>
+            </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="title" runat="server"></asp:TextBox>
         </div>
         <p>
             <asp:Label ID="Label3" runat="server" Text="Mô tả công việc"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="description" runat="server"></asp:TextBox>
         </p>
         <p style="margin-left: 40px">
             <asp:Label ID="Label5" runat="server" Text="Loại công việc"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <asp:ListItem Selected="True" Value="public">Công khai</asp:ListItem>
+                <asp:ListItem Value="private">Riêng tư</asp:ListItem>
             </asp:RadioButtonList>
         </p>
-        <p>
-            <asp:Label ID="Label4" runat="server" Text="File hoàn tất"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:FileUpload ID="FileUpload1" runat="server" />
+        <p style="margin-left: 200px">
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
         </p>
     </form>
 </body>
